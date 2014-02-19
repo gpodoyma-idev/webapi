@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,1:ImageSprite;/Areas/Epx/Themes/Msdn/Content:0,/Areas/Epx/Content/Css:1&amp;amp;hashKey=E7560C71640616C5057FAEACB58DCB00" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/2f95808e-ca34-4249-88ff-44fabe33cdc0Combined.css,1:LinkList,2:ImageSprite,2:SiteFeedbackLink;/Areas/Epx/Themes/Msdn/Content:0,/Areas/Epx/Themes/Base/Content:1,/Areas/Epx/Content/Css:2&amp;amp;hashKey=EEE39C2D6B93379FDAF50337BE99AF8C" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>WCF WebApi REST Entity Service</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>WCF WebApi REST Entity Service</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            WCF WebAPI
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            REST
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web, Cloud
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary Language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Last Updated</label>
+                    <div id="LastUpdated">7/22/2011</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/WCF-WebApi-REST-Entity-4cd7f7bd">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy Code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p>Demonstrates a REST Service built with WCF WebApi that fully complies with HTTP specs for use of GET, PUT, POST, DELETE ,
+<a href="http://www.odata.org/developers/protocols/uri-conventions" >
+OData URI Conventions</a> for query and includes unit tests to test compliance. <br>
+<br>
+<em>ca&middot;non&middot;i&middot;cal</em> [ kə n&oacute;nnik'l ] <strong>conforming to general principles:</strong> conforming to accepted principles or standard practice</p>
+<h3>Exploring The Sample</h3>
+<p>This Solution contains several projects</p>
+<table>
+<thead>
+<tr>
+<td><strong>Project</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CannonicalRESTWebApp</td>
+<td>Web application which hosts the service</td>
+</tr>
+<tr>
+<td>CannonicalRESTWebApp.Tests</td>
+<td>Unit test project</td>
+</tr>
+<tr>
+<td>WCFTestHelper</td>
+<td>Helper classes to start/Stop IIS Express, ASP.NET Development Server and Fiddler</td>
+</tr>
+<tr>
+<td>WebApi.Helpers</td>
+<td>Helper classes for working with WebApi</td>
+</tr>
+</tbody>
+</table>
+<h2>Testing</h2>
+<p>The test can be run on ASP.NET Development Server or IIS Express. To set the web server you prefer just change the following value in CannonicalWebApiTest.cs</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">public static readonly WebServer Server = WebServer.IISExpress;</pre>
+<div class="preview">
+<pre id="codePreview" class="csharp"><span class="cs__keyword">public</span>&nbsp;<span class="cs__keyword">static</span>&nbsp;<span class="cs__keyword">readonly</span>&nbsp;WebServer&nbsp;Server&nbsp;=&nbsp;WebServer.IISExpress;</pre>
+</div>
+</div>
+</div>
+<h2 class="endscriptcode">Setup the &quot;iisexpress&quot; Rule in Fiddler</h2>
+<p>When using fiddler to capture traffic with IIS express you need to setup a custom rule.&nbsp; Without this rule you will get test failures like this</p>
+<pre>Test method CannonicalRESTWebApp.Tests.CannonicalWebApiTest.PutMustBeIdempotentXml threw exception: <br>System.Net.Http.HttpException: Response status code does not indicate success: 502 (Fiddler - DNS Lookup Failed)</pre>
+<ol>
+<li>In Fiddler, select Rules / Customize Rules </li><li>Add the following rule in the OnBeforeRequest method </li></ol>
+<p>&nbsp;</p>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>JavaScript</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">js</span>
+<pre class="hidden">static function OnBeforeRequest(oSession:Fiddler.Session)
+{
+   // URL http://iisexpress:port can be used for capturing IIS Express traffic
+   if (oSession.HostnameIs(&quot;iisexpress&quot;)) { oSession.host = &quot;localhost:&quot;&#43;oSession.port; }
+</pre>
+<div class="preview">
+<pre class="js">static&nbsp;<span class="js__operator">function</span>&nbsp;OnBeforeRequest(oSession:Fiddler.Session)&nbsp;
+<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//&nbsp;URL&nbsp;http://iisexpress:port&nbsp;can&nbsp;be&nbsp;used&nbsp;for&nbsp;capturing&nbsp;IIS&nbsp;Express&nbsp;traffic</span>&nbsp;
+&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(oSession.HostnameIs(<span class="js__string">&quot;iisexpress&quot;</span>))&nbsp;<span class="js__brace">{</span>&nbsp;oSession.host&nbsp;=&nbsp;<span class="js__string">&quot;localhost:&quot;</span>&#43;oSession.port;&nbsp;<span class="js__brace">}</span>&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<h2 class="endscriptcode">Enable Put / Delete</h2>
+<p>When testing with IIS Express you must enable support for the PUT and Delete Verbs.&nbsp; If you don't you will get the following test failures</p>
+<pre>Response status code does not indicate success: 404 (Not Found)<br>Assert.AreEqual failed. Expected:&lt;Created&gt;. Actual:&lt;Conflict&gt;</pre>
+<ol>
+<li>Open C:\Program Files (x86)\IIS Express\AppServer\applicationhost.config </li><li>Add the PUT / DELETE verbs to the following handler </li></ol>
+<pre style="font-family:Consolas; font-size:13px; color:black; background:none repeat scroll 0% 0% white"><span style="color:gray">&lt;add&nbsp;name&nbsp;=&nbsp;</span><span style="color:gray">&quot;ExtensionlessUrl-Integrated-4.0&quot;</span><span style="color:gray">&nbsp;path&nbsp;=&nbsp;</span><span style="color:gray">&quot;*.&quot;</span><span style="color:gray">&nbsp;verb&nbsp;=&nbsp;</span><span style="color:gray">&quot;GET,HEAD,POST,DEBUG,PUT,DELETE&quot;</span><span style="color:gray">&nbsp;type&nbsp;=&nbsp;</span><span style="color:gray">&quot;System.Web.Handlers.TransferRequestHandler&quot;</span><span style="color:gray">&nbsp;preCondition&nbsp;=&nbsp;</span><span style="color:gray">&quot;integratedMode,runtimeVersionv4.0&quot;</span><span style="color:gray">&nbsp;/&gt;</span>
+</pre>
+</div>
+<p>&nbsp;</p>
+<h3>Canonical REST Entity Service URI Map</h3>
+<p>Base URI: http://tempuri.org/Resource where Resource is the name of the REST collection (i.e. Customers, Orders etc.)<br>
+<br>
+Web Formats XML and JSON are supported for all request/response messages<br>
+<br>
+</p>
+<table>
+<tbody>
+<tr>
+<th>URI Template </th>
+<th>HTTP Method </th>
+<th>Description </th>
+<th>Status </th>
+<th>Response Content </th>
+<th>Response Contains </th>
+</tr>
+<tr>
+<td><strong>/{key}</strong></td>
+<td>GET</td>
+<td>Gets a resource by key</td>
+<td>200</td>
+<td>OK</td>
+<td>Serialized resource</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>304</td>
+<td>Not Modified</td>
+<td>Empty</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>400</td>
+<td>Bad Request</td>
+<td>Empty or Serialized error message</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>404</td>
+<td>Not Found</td>
+<td>Empty</td>
+</tr>
+<tr>
+<td><strong>/</strong></td>
+<td>GET</td>
+<td>Gets a list of resources <br>
+</td>
+<td>200</td>
+<td>OK</td>
+<td>Serialized resources</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>400</td>
+<td>Bad Request</td>
+<td>Empty or Serialized error message</td>
+</tr>
+<tr>
+<td><strong>/</strong></td>
+<td>POST</td>
+<td>Adds a resource to the collection</td>
+<td>200</td>
+<td>OK</td>
+<td>Serialized resource</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>204</td>
+<td>No Content</td>
+<td>Empty</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>400</td>
+<td>Bad Request</td>
+<td>Empty or Serialized error message</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>409</td>
+<td>Conflict</td>
+<td>Empty or Serialized error message</td>
+</tr>
+<tr>
+<td><strong>/{key}</strong></td>
+<td>PUT</td>
+<td>Adds or Updates a resource identified by {key}. Some services might not allow add with PUT. If you return the updated resource, return 200. If you don't return 204.</td>
+<td>200</td>
+<td>OK</td>
+<td>Updated resource</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>204</td>
+<td>No Content</td>
+<td>Empty</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>400</td>
+<td>Bad Request</td>
+<td>Empty or Serialized error message</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>404</td>
+<td>Not Found</td>
+<td>Empty or Serialized error message</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>409</td>
+<td>Conflict</td>
+<td>Empty or Serialized error message</td>
+</tr>
+<tr>
+<td><strong>/{key}</strong></td>
+<td>DELETE</td>
+<td>Removes the resource identified by {key}. If you return the resource removed, return 200. If you don't return 204.</td>
+<td>200</td>
+<td>OK</td>
+<td>Deleted Resource</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>204</td>
+<td>No Content</td>
+<td>Empty</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>400</td>
+<td>Bad Request</td>
+<td>Empty or Serialized error message</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>404</td>
+<td>Not Found</td>
+<td>Empty or Serialized error message</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>409</td>
+<td>Conflict</td>
+<td>Empty or Serialized error message</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h2>GET TESTS</h2>
+<p>GET Spec <a href="http://code.msdn.microsoft.com/cannonicalRESTEntity/Wiki/View.aspx?title=uri%3a%20http%3a%2f%2fwww.w3.org%2fProtocols%2frfc2616%2frfc2616-sec9.html&amp;referringTitle=Home&amp;ANCHOR#sec9.3">
+uri: http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html</a></p>
+<h3>Tests <strong>GET /{key}</strong></h3>
+<ol>
+<li>GET MUST return a resource given a key if the resource with that key exists </li><li>GET MUST return 400-BadRequest if the key is invalid </li><li>GET MUST return 404-NotFound if the key is not found </li><li>GET MUST return 304-NotModified if Conditional GET conditions are met using If-None-Match
+</li><li>GET SHOULD return an ETag header </li></ol>
+<h3>Tests <strong>GET /</strong></h3>
+<ol>
+<li>GET MUST return resources in the collection </li><li>GET SHOULD support <a href="http://www.odata.org/developers/protocols/uri-conventions">
+<strong>OData URI Conventions</strong></a> </li></ol>
+<h2>POST TESTS</h2>
+<p>POST Spec <a href="http://code.msdn.microsoft.com/cannonicalRESTEntity/Wiki/View.aspx?title=uri%3a%20http%3a%2f%2fwww.w3.org%2fProtocols%2frfc2616%2frfc2616-sec9.html&amp;referringTitle=Home&amp;ANCHOR#sec9.5%20">
+uri: http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html</a></p>
+<h4>Tests <strong>POST /</strong></h4>
+<ol>
+<li>POST MAY append a valid resource to the resource collection using a server generated key.&nbsp;
+</li><li>POST MAY return 201 &ndash; Created if it wants to let the client know that it created a new resource.&nbsp;
+</li><li>POST MAY return 202 - Accepted if it accepts a request for later processing </li><li>If POST returns 201 - Created, The response MUST include a location header, entity tag and entity body
+</li><li>POST MUST return 400-Bad Request if the entity is invalid </li><li>POST MUST return 409-Conflict if the entity conflicts with another entity </li><li>POST MUST ignore writes to entity fields the server considers read only </li></ol>
+<h2>PUT TESTS</h2>
+<p>PUT Spec <a href="http://code.msdn.microsoft.com/cannonicalRESTEntity/Wiki/View.aspx?title=uri%3a%20http%3a%2f%2fwww.w3.org%2fProtocols%2frfc2616%2frfc2616-sec9.html&amp;referringTitle=Home&amp;ANCHOR#sec9.6%20">
+uri: http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html</a></p>
+<h4>Tests <strong>PUT /{key}</strong></h4>
+<ol>
+<li>PUT MUST Update the entity identified by the URI if it exists and return 200-OK with the modified entity and etag header
+</li><li>PUT MAY Add a new entity using the key provided in the URI and return 201-Created with entity location and etag
+</li><li>PUT MUST respect the Precondition If-Match </li><li>PUT MUST be Idempotent </li><li>PUT MUST NOT alter the key of the entity so that it does not match the key of the URI
+</li><li>PUT MUST return 400-BadRequest if the entity is invalid </li><li>PUT MUST return 400-BadRequest if the key is invalid </li><li>PUT MUST ignore writes to entity fields the server considers read only </li><li>PUT MUST return 404-NotFound if the server does not allow new entities to be added with PUT
+</li></ol>
+<h2>DELETE TESTS</h2>
+<p>DELETE Spec <a href="http://code.msdn.microsoft.com/cannonicalRESTEntity/Wiki/View.aspx?title=uri%3a%20http%3a%2f%2fwww.w3.org%2fProtocols%2frfc2616%2frfc2616-sec9.html&amp;referringTitle=Home&amp;ANCHOR#sec9.7%20">
+uri: http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html</a></p>
+<h4>Tests <strong>DELETE /{key}</strong></h4>
+<ol>
+<li>DELETE SHOULD delete an entity that exists and return 200-OK with the deleted entity or 204-No Content if the response does not include the entity
+</li><li>DELETE SHOULD be idempotent </li><li>DELETE SHOULD return with 412-PreconditionFailed if no matching entity for If-Match etag
+</li><li>DELETE SHOULD succeed if matching entity for If-Match etag </li><li>DELETE SHOULD succeed if wildcard used in If-Match etag </li><li>DELETE SHOULD return 202-Accepted if the request to delete has not been enacted
+</li><li>DELETE SHOULD return 400-BadRequest if the key is invalid </li></ol>
+
+</div>
+
+
+    </div>
+</body>
+</html>
