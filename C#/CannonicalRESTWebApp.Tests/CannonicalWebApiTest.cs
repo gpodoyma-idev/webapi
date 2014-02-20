@@ -15,7 +15,6 @@
     using WebAPI.Helpers;
 
     [TestClass]
-    [Ignore]
     public class CannonicalWebApiTest
     {
         #region Constants and Fields
